@@ -9,5 +9,14 @@ services:
       context: .
       dockerfile: Services/Catalog/Catalog.API/Dockerfile
 
+  mongo-express:
+    image: mongo-express
+    ports:
+      - 8081:8081
+    depends_on:
+      - catalogdb
+    environment:
+      ME_CONFIG_MONGODB_SERVER: catalogdb
+
 volumes:
   mongo_data:
