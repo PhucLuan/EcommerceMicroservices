@@ -25,7 +25,7 @@ namespace WebMVC.Pages
 
         public async Task<IActionResult> OnGetAsync()
         {
-            var userName = "swn";
+            var userName = "NguyenLuan";
             Cart = await _basketService.GetBasket(userName);
 
             return Page();
@@ -33,11 +33,12 @@ namespace WebMVC.Pages
 
         public async Task<IActionResult> OnPostCheckOutAsync()
         {
-            var userName = "swn";
+            var userName = "NguyenLuan";
             Cart = await _basketService.GetBasket(userName);
 
             if (!ModelState.IsValid)
             {
+                var test = ModelState.Values.ToList();
                 return Page();
             }
 

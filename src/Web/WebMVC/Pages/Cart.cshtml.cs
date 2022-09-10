@@ -21,7 +21,7 @@ namespace WebMVC.Pages
 
         public async Task<IActionResult> OnGetAsync()
         {
-            var userName = "swn";
+            var userName = "NguyenLuan";
             Cart = await _basketService.GetBasket(userName);
 
             return Page();
@@ -29,7 +29,7 @@ namespace WebMVC.Pages
 
         public async Task<IActionResult> OnPostRemoveToCartAsync(string productId)
         {
-            var userName = "swn";
+            var userName = "NguyenLuan";
             var basket = await _basketService.GetBasket(userName);
 
             var item = basket.Items.Single(x => x.ProductId == productId);

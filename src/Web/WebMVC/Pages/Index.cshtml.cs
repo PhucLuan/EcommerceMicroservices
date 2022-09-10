@@ -31,7 +31,7 @@ namespace WebMVC.Pages
         {
             var product = await _catalogService.GetCatalog(productId);
 
-            var userName = "swn";
+            var userName = "NguyenLuan";
             var basket = await _basketService.GetBasket(userName);
 
             basket.Items.Add(new BasketItemModel

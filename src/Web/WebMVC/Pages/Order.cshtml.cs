@@ -21,7 +21,7 @@ namespace WebMVC.Pages
 
         public async Task<IActionResult> OnGetAsync()
         {
-            Orders = await _orderService.GetOrdersByUserName("swn");
+            Orders = await _orderService.GetOrdersByUserName("NguyenLuan");
 
             return Page();
         }
